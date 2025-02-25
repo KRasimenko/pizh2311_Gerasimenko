@@ -1,4 +1,4 @@
-from Roman_to_int import Roman
+from Roman import Roman
 class CheckRoman:
     def _isRoman(self, roman: str) -> bool:
         """ Метод для проверки, является ли строка римским числом.
