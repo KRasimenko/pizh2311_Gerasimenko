@@ -65,6 +65,21 @@ class LoanInterface:
         print(f"Общая сумма выплат: {total_payment:,.2f} руб.")
         print(f"Сумма переплаты: {overpayment:,.2f} руб.")
 
+        
+        print("\nГрафик платежей:")
+        print("-" * 80)
+        print(f"{'Месяц':^6} | {'Платеж':^15} | {'Основной долг':^15} | {'Проценты':^15} | {'Остаток':^15}")
+        print("-" * 80)
+        
+        schedule = calculator.get_payment_schedule()
+        for payment in schedule:
+            print(f"{payment['month']:^6} | "
+                  f"{payment['payment']:>15,.2f} | "
+                  f"{payment['principal']:>15,.2f} | "
+                  f"{payment['interest']:>15,.2f} | "
+                  f"{payment['remaining']:>15,.2f}")
+        print("-" * 80)
+
     def run(self) -> None:
         """
         Запускает интерактивный процесс расчета кредита.
