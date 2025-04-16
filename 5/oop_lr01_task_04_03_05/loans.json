@@ -1,0 +1,12 @@
+[
+  {
+    "loan_amount": 100000.0,
+    "loan_term": 12,
+    "interest_rate": 8.0
+  },
+  {
+    "loan_amount": 200000.0,
+    "loan_term": 24,
+    "interest_rate": 9.5
+  }
+]
